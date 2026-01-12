@@ -34,16 +34,17 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-pp-lettra-mono), monospace;
+  font-family: var(--font-pp-lettra-mono), var(--font-arita-buri), monospace, serif;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
+/* Typography - 제목은 Mulche Bold 사용 */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-family: var(--font-mulche), var(--font-pp-lettra-mono), sans-serif;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
@@ -57,11 +58,6 @@ h6 { font-size: 1rem; }
 
 p {
   margin-bottom: 1rem;
-}
-
-/* Korean text styling */
-:lang(ko) {
-  font-family: var(--font-arita-buri), serif;
 }
 
 /* Links */
@@ -116,18 +112,26 @@ pre code {
   max-width: 65ch;
 }
 
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-family: var(--font-mulche), var(--font-pp-lettra-mono), sans-serif;
+  font-weight: 700;
+}
+
 .prose h1 {
   font-size: 2.25rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
 }
 
 .prose h2 {
   font-size: 1.875rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
   border-top: 1px solid var(--gray-200);
   padding-top: 2rem;
 }
@@ -136,14 +140,12 @@ pre code {
   font-size: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
-  font-weight: 500;
 }
 
 .prose h4 {
   font-size: 1.25rem;
   margin-top: 1.25rem;
   margin-bottom: 0.75rem;
-  font-weight: 500;
 }
 
 .prose p {
