@@ -35,19 +35,19 @@ export default function AboutPage() {
             <p>Feel free to reach out for collaborations or just to say hello.</p>
             <div className="pt-4 space-y-2">
               <p>
-                <span className="inline-block w-20">Email:</span>
-                <a href="mailto:hello@luckyzz.kr">hello@luckyzz.kr</a>
+                <span className="inline-block w-24">Email:</span>
+                <a href="mailto:hanjihunted@gmail.com">hanjihunted@gmail.com</a>
               </p>
               <p>
-                <span className="inline-block w-20">GitHub:</span>
-                <a href="https://github.com/luckyzz" target="_blank" rel="noopener noreferrer">
-                  @luckyzz
+                <span className="inline-block w-24">Instagram:</span>
+                <a href="https://instagram.com/neohijnah" target="_blank" rel="noopener noreferrer">
+                  @neohijnah
                 </a>
               </p>
               <p>
-                <span className="inline-block w-20">Twitter:</span>
-                <a href="https://twitter.com/luckyzz" target="_blank" rel="noopener noreferrer">
-                  @luckyzz
+                <span className="inline-block w-24">GitHub:</span>
+                <a href="https://github.com/illheon" target="_blank" rel="noopener noreferrer">
+                  @illheon
                 </a>
               </p>
             </div>

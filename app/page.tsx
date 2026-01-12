@@ -12,11 +12,18 @@ export default function Home() {
         <h1 className="text-6xl font-medium mb-6 leading-tight">
           luckyzz
         </h1>
-        <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
-          Designer, Developer, Creator.
-          <br />
-          Minimal design with maximum impact.
-        </p>
+        <div className="text-xl max-w-2xl leading-relaxed space-y-2">
+          <p>
+            <a href="https://instagram.com/neohijnah" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black">
+              @neohijnah
+            </a>
+          </p>
+          <p>
+            <a href="mailto:hanjihunted@gmail.com" className="text-gray-600 hover:text-black">
+              hanjihunted@gmail.com
+            </a>
+          </p>
+        </div>
       </section>
 
       {/* Recent Works */}

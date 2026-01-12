@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="ko" className={`${ppLettraMono.variable} ${aritaBuri.variable} ${mulche.variable}`}>
       <body className="antialiased">
         <Header />
-        <main className="pt-20">
+        <main>
           {children}
         </main>
       </body>
