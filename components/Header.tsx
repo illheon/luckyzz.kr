@@ -2,32 +2,42 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-50 hidden md:block">
-      <div className="flex flex-col gap-8 text-sm">
-        <Link
-          href="/"
-          className="border-0 hover:opacity-60 transition-opacity -rotate-90 origin-center whitespace-nowrap"
-        >
-          luckyzz.kr
-        </Link>
-        <Link
-          href="/works"
-          className="border-0 hover:opacity-60 transition-opacity -rotate-90 origin-center"
-        >
-          Works
-        </Link>
-        <Link
-          href="/blog"
-          className="border-0 hover:opacity-60 transition-opacity -rotate-90 origin-center"
-        >
-          Blog
-        </Link>
-        <Link
-          href="/about"
-          className="border-0 hover:opacity-60 transition-opacity -rotate-90 origin-center"
-        >
-          About
-        </Link>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+      <div className="max-w-5xl mx-auto px-6 py-5">
+        <div className="flex items-center justify-between">
+          <Link
+            href="/"
+            className="text-sm tracking-tight border-0 hover:opacity-50 transition-opacity"
+          >
+            luckyzz.kr
+          </Link>
+          <div className="flex gap-8 text-sm">
+            <Link
+              href="/thinking"
+              className="border-0 hover:opacity-50 transition-opacity"
+            >
+              Thinking
+            </Link>
+            <Link
+              href="/work"
+              className="border-0 hover:opacity-50 transition-opacity"
+            >
+              Work
+            </Link>
+            <Link
+              href="/experiments"
+              className="border-0 hover:opacity-50 transition-opacity"
+            >
+              Experiments
+            </Link>
+            <Link
+              href="/info"
+              className="border-0 hover:opacity-50 transition-opacity"
+            >
+              Info
+            </Link>
+          </div>
+        </div>
       </div>
     </nav>
   );

@@ -1,110 +1,40 @@
-import Link from 'next/link';
-import { getAllPosts, getAllWorks } from '@/lib/blog';
-
 export default function Home() {
-  const recentPosts = getAllPosts().slice(0, 3);
-  const recentWorks = getAllWorks().slice(0, 3);
-
   return (
-    <div className="max-w-4xl mx-auto px-6 py-16 min-h-[calc(100vh-5rem)]">
-      {/* Hero Section */}
-      <section className="mb-24 pt-16">
-        <h1 className="text-6xl font-medium mb-6 leading-tight">
-          luckyzz
+    <div className="max-w-4xl mx-auto px-6 min-h-screen flex items-center">
+      <section className="w-full py-24">
+        {/* Main Identity Statement */}
+        <h1 className="text-[2.75rem] leading-[1.25] tracking-tight mb-12 font-normal max-w-2xl">
+          포스트휴먼 관점에서
+          <br />
+          이 시대의 기술과 변화를
+          <br />
+          냉철하게 판단하는 사람
         </h1>
-        <div className="text-xl max-w-2xl leading-relaxed space-y-2">
-          <p>
-            <a href="https://instagram.com/neohijnah" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-black">
-              @neohijnah
-            </a>
-          </p>
-          <p>
-            <a href="mailto:hanjihunted@gmail.com" className="text-gray-600 hover:text-black">
-              hanjihunted@gmail.com
-            </a>
-          </p>
+
+        {/* Elaboration */}
+        <p className="text-lg leading-relaxed mb-6 text-gray-700 max-w-xl font-light">
+          디자인, AI, 시스템을 횡단하며
+          <br />
+          무엇이 바뀌어야 하는지와 그 이유를 구조적으로 탐구합니다.
+        </p>
+
+        {/* English Supporting Line */}
+        <p className="text-sm leading-relaxed mb-10 text-gray-500 max-w-xl font-light">
+          Exploring technology and change
+          <br />
+          from a post-human perspective.
+        </p>
+
+        {/* Positioning Keywords */}
+        <div className="text-xs tracking-wide text-gray-400 mb-12 font-light">
+          Post-Humanism · AI-First Thinking · Systems · Research
         </div>
+
+        {/* Proof Hint Line */}
+        <p className="text-xs text-gray-400 font-light">
+          사고의 흔적과 실험은 아래에 정리되어 있습니다.
+        </p>
       </section>
-
-      {/* Recent Works */}
-      {recentWorks.length > 0 && (
-        <section className="mb-24">
-          <div className="flex justify-between items-baseline mb-8">
-            <h2 className="text-3xl font-medium">Recent Works</h2>
-            <Link href="/works" className="text-sm">
-              View all →
-            </Link>
-          </div>
-          <div className="grid gap-8">
-            {recentWorks.map((work) => (
-              <Link
-                key={work.slug}
-                href={`/works/${work.slug}`}
-                className="group block border-0"
-              >
-                <div className="border-t border-black pt-4 pb-4 transition-all group-hover:pl-4">
-                  <div className="flex justify-between items-baseline mb-2">
-                    <h3 className="text-xl font-medium">{work.title}</h3>
-                    <span className="text-sm text-gray-600">{work.date}</span>
-                  </div>
-                  {work.description && (
-                    <p className="text-gray-600">{work.description}</p>
-                  )}
-                  {work.tags && work.tags.length > 0 && (
-                    <div className="flex gap-2 mt-2">
-                      {work.tags.map((tag) => (
-                        <span key={tag} className="text-xs text-gray-500">
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Recent Blog Posts */}
-      {recentPosts.length > 0 && (
-        <section className="mb-24">
-          <div className="flex justify-between items-baseline mb-8">
-            <h2 className="text-3xl font-medium">Recent Posts</h2>
-            <Link href="/blog" className="text-sm">
-              View all →
-            </Link>
-          </div>
-          <div className="grid gap-6">
-            {recentPosts.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group block border-0"
-              >
-                <div className="border-t border-black pt-4 pb-4 transition-all group-hover:pl-4">
-                  <div className="flex justify-between items-baseline mb-2">
-                    <h3 className="text-lg font-medium">{post.title}</h3>
-                    <span className="text-sm text-gray-600">{post.date}</span>
-                  </div>
-                  {post.excerpt && (
-                    <p className="text-gray-600 text-sm">{post.excerpt}</p>
-                  )}
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Empty state if no content */}
-      {recentWorks.length === 0 && recentPosts.length === 0 && (
-        <section className="text-center py-16">
-          <p className="text-gray-600 mb-8">
-            Content coming soon. Add markdown files to /content/blog and /content/works to get started.
-          </p>
-        </section>
-      )}
     </div>
   );
 }
