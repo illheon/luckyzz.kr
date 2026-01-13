@@ -1,9 +1,9 @@
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto px-6 min-h-screen flex items-center">
-      <section className="w-full py-24">
+    <div className="max-w-4xl mx-auto px-6 min-h-screen">
+      <section className="w-full py-32">
         {/* Main Identity Statement */}
-        <h1 className="text-[2.75rem] leading-[1.25] tracking-tight mb-12 font-normal max-w-2xl">
+        <h1 className="text-[2.75rem] leading-[1.25] tracking-tight mb-12 max-w-2xl">
           포스트휴먼 관점에서
           <br />
           이 시대의 기술과 변화를

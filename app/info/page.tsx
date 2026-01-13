@@ -6,11 +6,11 @@ export const metadata = {
 export default function InfoPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-24 min-h-screen">
-      <h1 className="text-4xl mb-8 font-light tracking-tight">Info</h1>
+      <h1 className="text-4xl mb-8 tracking-tight">Info</h1>
 
       <div className="space-y-12 text-gray-700 leading-relaxed">
         <section>
-          <h2 className="text-xl mb-4 font-normal">Background</h2>
+          <h2 className="text-xl mb-4">Background</h2>
           <p className="mb-4">
             디자인과 기술의 경계를 넘나들며, AI 시대의 새로운 가능성을 탐구합니다.
           </p>
@@ -20,7 +20,7 @@ export default function InfoPage() {
         </section>
 
         <section>
-          <h2 className="text-xl mb-4 font-normal">Focus Areas</h2>
+          <h2 className="text-xl mb-4">Focus Areas</h2>
           <ul className="space-y-2 text-sm">
             <li>• Post-Human Philosophy & Technology</li>
             <li>• AI-First Design Systems</li>
@@ -30,7 +30,7 @@ export default function InfoPage() {
         </section>
 
         <section>
-          <h2 className="text-xl mb-4 font-normal">Contact</h2>
+          <h2 className="text-xl mb-4">Contact</h2>
           <div className="space-y-2 text-sm">
             <p>
               <span className="inline-block w-24 text-gray-500">Email</span>
@@ -67,7 +67,7 @@ export default function InfoPage() {
           <p className="text-xs text-gray-400">
             Built with Next.js, TypeScript, and a focus on clarity over decoration.
             <br />
-            Fonts: PP Lettra Mono, Arita Buri
+            Fonts: PP Lettra Mono, Arita Buri, Mulche
           </p>
         </section>
       </div>
